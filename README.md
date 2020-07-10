@@ -41,7 +41,7 @@
 打开命令行粘贴一键安装脚本：
 
 ```shell
-wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/CCChieh/IBMYes/master/install.sh && chmod +x install.sh  && ./install.sh
+wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/mmpuq/IBMYes/master/install.sh && chmod +x install.sh  && ./install.sh
 ```
 
 ![image-20200615210944753](img/README/image-20200615210944753.png)
