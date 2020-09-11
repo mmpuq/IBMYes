@@ -40,7 +40,7 @@ install(){
     cd ${SH_PATH}/IBMYes/gi-cloudfoundry
     UUID=$(cat /proc/sys/kernel/random/uuid)
     echo "uuid: " $UUID
-    sed -i "s/id\": .*\"/id\": \"$UUID\"/g" ./gi-cloudfoundry/config.json
+    sed -i "s/id\": .*\"/id\": \"$UUID\"/g" ./gi/config.json
     ibmcloud target --cf
     ibmcloud cf install
     ibmcloud cf push
