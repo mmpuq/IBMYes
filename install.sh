@@ -29,18 +29,18 @@ clone_repo(){
     git clone https://github.com/mmpuq/IBMYes
     cd IBMYes
     git submodule update --init --recursive
-    cd v2ray-cloudfoundry/v2ray
+    cd gi-cloudfoundry/differentbi
     chmod +x *
-    cd ${SH_PATH}/IBMYes/v2ray-cloudfoundry
+    cd ${SH_PATH}/IBMYes/gi-cloudfoundry
     echo "初始化完成。"
 }
 
 install(){
     echo "进行安装。。。"
-    cd ${SH_PATH}/IBMYes/v2ray-cloudfoundry
+    cd ${SH_PATH}/IBMYes/gi-cloudfoundry
     UUID=$(cat /proc/sys/kernel/random/uuid)
     echo "uuid: " $UUID
-    sed -i "s/id\": .*\"/id\": \"$UUID\"/g" ./v2ray/config.json
+    sed -i "s/id\": .*\"/id\": \"$UUID\"/g" ./gi/config.json
     ibmcloud target --cf
     ibmcloud cf install
     ibmcloud cf push
